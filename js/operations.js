@@ -42,8 +42,14 @@ console.log(skaiciausSakinys);
 // Skaicius '2' ir skaicius "trys " yra geri skaiciai.
 const du = 2;
 const trys = 'trys';
-const sakinys = `Skaicius '${du}' ir skaicius "trys" yra geri skaiciai.`;
+const sakinys = `Skaicius '${du}' ir skaicius "${trys}" yra geri skaiciai.`;
 console.log( sakinys );
+
+// Skaicius '2' ir skaicius "trys " yra geri skaiciai.
+const vienas = 15;
+const keturi = 'keturi';
+const vkSakinys = 'Skaicius \''+vienas+'\' ir skaicius "'+keturi+'" yra geri skaiciai.';
+console.log(vkSakinys);
 
 console.log('-----------------------');
 
@@ -78,3 +84,5 @@ abcSakinys = abcSakinys + abc[3];
 abcSakinys = abcSakinys + abc[4];
 abcSakinys = abcSakinys + abc[5];
 console.log('Visa ABC:', abcSakinys);
+
+console.log( pazymiai[3.141529654] );
