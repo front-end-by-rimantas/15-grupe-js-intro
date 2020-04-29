@@ -50,3 +50,23 @@ for ( let i=tekstoIlgis-1; i>=0; i-- ) {
 // }
 
 console.log(`Tekstas "${tekstas}" atbulai yra "${atbulas}".`);
+
+console.log('--------------------------');
+console.log('DALYBA BE LIEKANOS');
+console.log('--------------------------');
+
+const from = 1;
+const till = 11;
+const divider = 3;
+let count = 0;
+
+for ( let i=from; i<=till; i++ ) {
+    if ( i % divider === 0 ) {
+        // count = count + 1;       // naudotinas analogas sekancioje eiluteje
+        count++;
+    }
+}
+
+const answer = `Skaičių intervale tarp ${from} ir ${till}, besidalinančių be liekanos iš ${divider} yra ${count} vienetai.`;
+
+console.log(answer);
