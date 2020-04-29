@@ -69,3 +69,51 @@ console.log( daugyba(3.6, -1.5) );
 console.log('----------------------');
 console.log('SKAITMENU KIEKIS SKAICIUJE');
 console.log('----------------------');
+
+function skaitmenuKiekisSkaiciuje( number ){
+    // validavimas
+    if ( typeof(number) !== 'number' ||
+         isFinite(number) === false ) {
+        return console.error('ERROR: reikalingas tikras skaicius');
+    }
+
+    // logika
+    const skaiciusTekstu = ''+number;
+    let count = skaiciusTekstu.length;
+
+    // jei tekstineje skaiciaus reprezentacijoje yra kablelis, tai count--
+    // pavyzdys, kaip ieskoti su ciklu (siam scenarijuje neverta naudoti)
+    // for ( let i=0; i<skaiciusTekstu.length; i++ ) {
+    //     if ( skaiciusTekstu[i] === '.' ) {
+    //         count--;
+    //         break;
+    //     }
+    // }
+    if ( number % 1 !== 0 ) {
+        count--;
+    }
+
+    // jei neigiamas skaicius, tai count--
+    if ( number < 0 ) {
+        count--;
+    }
+
+    // rezultato grazinimas
+    return count;
+}
+
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( 'asd' ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ), '->', 1 );
+console.log( skaitmenuKiekisSkaiciuje( 781 ), '->', 3 );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ), '->', 11 );
+console.log( skaitmenuKiekisSkaiciuje( 3.1415 ), '->', 5 );
+console.log( skaitmenuKiekisSkaiciuje( -12345 ), '->', 5 );
+console.log( skaitmenuKiekisSkaiciuje( -3.1415 ), '->', 5 );
+
+
+console.log('kas negerai su tokiu skaiciume??? 🤔🤔');
+console.log( skaitmenuKiekisSkaiciuje( 10000000000000000000000000000000000000000 ), '->', 31 );
