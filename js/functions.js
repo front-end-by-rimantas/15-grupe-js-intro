@@ -78,7 +78,7 @@ function skaitmenuKiekisSkaiciuje( number ){
     }
 
     // logika
-    const skaiciusTekstu = ''+number;
+    const skaiciusTekstu = number.toLocaleString('fullwide', { useGrouping: false });
     let count = skaiciusTekstu.length;
 
     // jei tekstineje skaiciaus reprezentacijoje yra kablelis, tai count--
